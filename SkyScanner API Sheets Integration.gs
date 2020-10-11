@@ -33,7 +33,7 @@ function fetchprice(from, to, date) {
       minQuote = quotes[i]["MinPrice"];
     }
   }
-  // now we just need to return the lowest price that we've managed to find
+  	// now we just need to return the lowest price that we've managed to find
   return minQuote;
 					}
 
@@ -60,7 +60,7 @@ function minCarrier(from, to, date) {
     if(quotes[i]["MinPrice"] < minQuote)
     {
       minQuote = quotes[i]["MinPrice"];
-      // we set our new variable equal to the array that we retrieved the minumum price from for identification purposes, so that we can refer back to this specific flight later
+      	// we set our new variable equal to the array that we retrieved the minumum price from for identification purposes, so that we can refer back to this specific flight later
       minQuoteObject = quotes[i];
     }
   }
@@ -80,10 +80,11 @@ function minCarrier(from, to, date) {
   } 
   	// returns the airline name associated with our cheap flight as a string of text
   return carriername;
-}
+					}
 
 
 // function to specify what time of date our previously identified cheapest flight leaves at, so we can finally narrow down exactly which flight we've singled out
+
 function flightTime(from, to, date) {
   var parameter = {
 	"method": "GET",
@@ -109,7 +110,7 @@ function flightTime(from, to, date) {
   	// everything above this comment should be familiar
   	// now we need to declare a new variable for our departure time
  	// immediately set it equal to the string we retrieve from the array associated with our flight of interest
-  var departtime = minQuoteObject["OutboundLeg"]["DepartureDate"];\
+  var departtime = minQuoteObject["OutboundLeg"]["DepartureDate"];
   	// new variable, we convert the date string into a date value that our script can interpret natively
  	// however, this string will include the year month day and separate the exactly time with a 'T'
   var datetime = new Date(departtime);
@@ -120,4 +121,4 @@ function flightTime(from, to, date) {
  	// return our time string
   return timestring
   ;
-}
+					}
