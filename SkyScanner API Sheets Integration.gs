@@ -14,7 +14,6 @@ function fetchprice(from, to, date) {
 		"x-rapidapi-key": "YOUR-API-KEY-HERE"
 	}
     					}; 
-
     	// now we need to generate the URL that the API will access to retrieve data from
   var url = "https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/CA/CAD/en-CA/" + from + "/" + to + "/" + date;
   	// use UrlFetchApp.fetch in lieu of jQuery for ease of use
