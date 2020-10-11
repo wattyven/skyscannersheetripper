@@ -119,6 +119,5 @@ function flightTime(from, to, date) {
  	// set a new variable equal to a string that's comprised of the hours and minutes, separated by a colon as per usual (HH:MM)
   var timestring = datetime.getHours() + ":" + datetime.getMinutes();
  	// return our time string
-  return timestring
-  ;
+  return timestring  ;
 					}
